@@ -1,16 +1,16 @@
 # mamitas
 
-## Project setup
+## Configuración del Proyecto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compila y hot-reloads para desarrollo
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compila y minimiza para producción
 ```
 npm run build
 ```

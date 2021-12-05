@@ -1,20 +1,31 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Perfil from "../components/Perfil.vue";
+import Feed from "../components/Feed.vue"
+import About from "../views/About.vue"
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Feed",
+    component: Feed,
   },
   {
     path: "/about",
     name: "About",
-    component: About,
+    component: About
+  },
+  {
+    path: "/perfil",
+    name: "Perfil",
+    component: Perfil,
+  },
+  {
+    path: "/feed",
+    name: "Feed",
+    component: Feed,
   },
 ];
 

@@ -1,9 +1,10 @@
 <template>
-  <v-container>
-    <h3>Consejos para mamá</h3>
-  </v-container>
+    <v-container>
+        <h1>Consejos para mammitas</h1>
+    </v-container>
 </template>
-
 <script>
-export default {};
+export default {
+    
+}
 </script>

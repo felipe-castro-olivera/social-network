@@ -4,12 +4,12 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
-// import vueTextAreaAutosize from 'vue-textarea-autosize'
+import { getFirestore } from "firebase/firestore/lite";
+import { getAuth } from "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/storage";
 
-
-// CONFIGURACIONES DE FIREBASE/FIRESTORE
-const configuracionFirebase = {
+const firebaseConfig = {
   apiKey: "AIzaSyCVLGGhDm8R3fE8ycE_slvedt4FXSU95f0",
   authDomain: "mamitas-732b2.firebaseapp.com",
   projectId: "mamitas-732b2",
@@ -18,9 +18,14 @@ const configuracionFirebase = {
   appId: "1:214865855219:web:777d8b226c80b2ce386d86",
 };
 
-const app = initializeApp(configuracionFirebase);
-export const db = getFirestore(app);
-// FIN CONFIGURACIONES DE FIREBASE/FIRESTORE
+firebase.initializeApp(firebaseConfig);
+var storage = firebase.storage();
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth();
+
+export { db, auth, storage };
 
 Vue.config.productionTip = false;
 
